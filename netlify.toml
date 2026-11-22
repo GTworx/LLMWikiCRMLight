@@ -1,0 +1,6 @@
+[build.environment]
+  # These are non-sensitive LLM configuration values (a context-window size,
+  # public URLs and model names) that also appear as defaults in the source,
+  # so the secrets scanner should not treat them as leaked secrets.
+  # Real secrets (AUTH_SECRET, BREVO_API_KEY, OLLAMA_API_KEY) are still scanned.
+  SECRETS_SCAN_OMIT_KEYS = "OLLAMA_NUM_CTX,OLLAMA_URL,OLLAMA_MODEL,OLLAMA_CLOUD_URL,OLLAMA_CLOUD_MODEL"
