@@ -1,6 +1,6 @@
 # Netlify's secrets scanner fails the deploy when a secret's value appears in the
 # source or build output. These Ollama settings are non-sensitive (a context-window
 # size, public URLs and model names) and appear as defaults in the code, so skip them.
-# Real secrets (AUTH_SECRET, BREVO_API_KEY, OLLAMA_API_KEY) are still scanned.
+# Real secrets (AUTH_SECRET, BREVO_API_KEY, OLLAMA_API_KEY, emails) are still scanned.
 [build.environment]
-  SECRETS_SCAN_OMIT_KEYS = "OLLAMA_NUM_CTX,OLLAMA_URL,OLLAMA_MODEL,OLLAMA_CLOUD_URL,OLLAMA_CLOUD_MODEL"
+  SECRETS_SCAN_OMIT_KEYS = "OLLAMA_NUM_CTX,OLLAMA_URL,OLLAMA_MODEL,OLLAMA_CLOUD_URL,OLLAMA_CLOUD_MODEL,BREVO_SENDER_NAME,APP_URL,CRM_DATA_DIR,OWN_COMPANY_DOMAINS,COMPANY_NAME,DEFAULT_CURRENCY"
